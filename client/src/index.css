@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 212 13% 13%; /* #212121 */
+  --muted: 0 0% 96%;
+  --muted-foreground: 0 0% 46%; /* #757575 */
+  --popover: 0 0% 100%;
+  --popover-foreground: 212 13% 13%;
+  --card: 0 0% 100%;
+  --card-foreground: 212 13% 13%;
+  --border: 0 0% 90%;
+  --input: 0 0% 90%;
+  --primary: 207 90% 54%; /* #2196F3 */
+  --primary-foreground: 210 100% 99%;
+  --secondary: 122 39% 49%; /* #4CAF50 */
+  --secondary-foreground: 210 100% 99%;
+  --accent: 0 0% 96%;
+  --accent-foreground: 212 13% 13%;
+  --destructive: 4 90% 58%; /* #F44336 */
+  --destructive-foreground: 60 9.1% 97.8%;
+  --warning: 36 100% 50%; /* #FF9800 */
+  --ring: 212 13% 13%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 122 39% 49%;
+  --secondary-foreground: 211 100% 99%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --warning: 36 100% 50%;
+  --ring: 240 4.9% 83.9%;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-gray-50 text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Thermal receipt styling */
+.thermal-receipt {
+  font-family: 'Courier New', monospace;
+  line-height: 1.2;
+}
+
+/* Print button hover effects */
+.print-button {
+  transition: all 0.2s ease;
+}
+
+.print-button:hover {
+  transform: scale(1.05);
+}
+
+.print-button:active {
+  transform: scale(0.95);
+}
+
+/* Status indicators */
+.status-connected {
+  background-color: hsl(var(--secondary));
+}
+
+.status-error {
+  background-color: hsl(var(--destructive));
+}
+
+.status-warning {
+  background-color: hsl(var(--warning));
+}
