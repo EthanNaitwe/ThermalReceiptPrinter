@@ -1,1 +1,2 @@
 # ThermalReceiptPrinter
+Welcome to ThermalReceiptPrinter
